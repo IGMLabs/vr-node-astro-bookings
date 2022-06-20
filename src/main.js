@@ -1,4 +1,6 @@
-import { getGreetings } from "./lib.js";
+import { empresa, getGreetings } from "./lib.js";
 
-const greetings = getGreetings("IGM labs");
+// const greetings = saludos.getGreetings("IGM labs");
+const greetings = getGreetings(empresa);
+
 console.log(greetings);

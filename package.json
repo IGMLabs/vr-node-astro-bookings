@@ -1,5 +1,5 @@
 {
-  "name": "ab-node-astro-bookings",
+  "name": "vr-node-astro-bookings",
   "version": "1.2.0",
   "description": "Fundamental Javascript boilerplate",
   "type": "module",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IGMLabs/ab-node-astro-bookings.git"
+    "url": "git+https://github.com/IGMLabs/vr-node-astro-bookings.git"
   },
   "keywords": [
     "javascript",
@@ -29,9 +29,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IGMLabs/ab-node-astro-bookings/issues"
+    "url": "https://github.com/IGMLabs/vr-node-astro-bookings/issues"
   },
-  "homepage": "https://github.com/IGMLabs/ab-node-astro-bookings#readme",
+  "homepage": "https://github.com/IGMLabs/vr-node-astro-bookings#readme",
   "devDependencies": {
     "eslint": "^8.18.0",
     "eslint-config-prettier": "^8.5.0",
