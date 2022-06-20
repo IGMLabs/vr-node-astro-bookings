@@ -20,13 +20,13 @@ const twoSeconds = 2000;
 
 // console.log("after all the code");
 
-
 /* tarea de hacer un hola durante 4 segundos */
+
 let cont = 1;
-const id = setInterval(() => {    
-    console.log("Hello " + cont);
-    cont++;    
-    if (cont > 4) {
-        clearInterval(id);
-    }
+const id = setInterval(() => {
+  console.log("Hello " + cont);
+  cont++;
+  if (cont > 4) {
+    clearInterval(id);
+  }
 }, twoSeconds);
