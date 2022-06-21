@@ -18,7 +18,7 @@ function onWriteEnd() {
   console.log("Archivo copiado");
 }
 
-function onError(err) {
+function onError() {
   console.log(` error`);
 }
 
