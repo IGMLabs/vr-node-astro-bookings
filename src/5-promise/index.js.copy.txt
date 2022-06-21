@@ -2,12 +2,13 @@ import * as fs from "fs/promises";
 
 const scriptFile = process.argv[1];
 fs.readFile(scriptFile)
-  .then(copyFile)
-  .then((fileContent) => copyFile(fileContent))
-  .then(function onFileRead(fileContent) {
-    copyFile(fileContent);
+  .then((filecontent) => {
+    copyFile(filecontent);
+    console.log(filecontent.toString());
   })
-  .catch(onError)
+  .catch((err) => {
+    console.log(`Error: ${err} `);
+  })
   .finally(() => {
     console.log("Terminado");
   });
@@ -18,13 +19,9 @@ function onWriteEnd() {
   console.log("Archivo copiado");
 }
 
-function onError(err) {
-  console.log(` error`);
-}
-
 function copyFile(fileContent) {
   fs.writeFile(`${scriptFile}.copy.txt`, fileContent)
     .then(onWriteEnd)
-    .catch(onError)
+    .catch((err) => console.log(`Error ${err}`))
     .finally(() => console.log("acabei"));
 }
