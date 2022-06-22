@@ -21,12 +21,11 @@ process.on("message", (parent) => {
   let aux = parent.numero;
   console.log(parent.numero);
   if (parent.numero <= 0) {
-    fs.writeFile(`./src/7-child/${aux}.txt`, valor + "error").finally(()=>process.exit());
+    fs.writeFile(`./src/7-child/${aux}.txt`, valor + "error").finally(() => process.exit());
     //process.send({ error: "error numero cero" });
   }
   if (parent.numero == 1) {
-    fs.writeFile(`./src/7-child/${aux}.txt`, parent.numero + "").finally(()=>process.exit());
-
+    fs.writeFile(`./src/7-child/${aux}.txt`, parent.numero + "").finally(() => process.exit());
   }
   if (parent.numero > 1) {
     while (parent.numero != 1) {
@@ -38,6 +37,6 @@ process.on("message", (parent) => {
         valor += parent.numero + " ";
       }
     }
-    fs.writeFile(`./src/7-child/${aux}.txt`, valor).finally(()=>process.exit());
+    fs.writeFile(`./src/7-child/${aux}.txt`, valor).finally(() => process.exit());
   }
 });
