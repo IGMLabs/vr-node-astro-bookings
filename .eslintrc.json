@@ -1,7 +1,7 @@
 {
   "extends": [
-    "eslint:recommended",
-    "plugin:prettier/recommended"
+    // "eslint:recommended",
+    //"plugin:prettier/recommended"
   ],
   "plugins": [
     "prettier"
@@ -20,9 +20,13 @@
   },
   "rules": {
     "curly": [
-      "warn",
+      "off",
       "all"
     ],
+    "max-nested-callbacks":["warn",
+      {
+        "max":3
+    }],
     "no-magic-numbers": [
       "warn",
       {
